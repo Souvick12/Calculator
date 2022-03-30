@@ -5,27 +5,27 @@ class Calculator
 		print "Enter the second value:"
 		@b = gets.chomp.to_i
 	end
-	def add
+	def addition_op
 		puts "Addition"
 		get_input
 		puts "#{@a} + #{@b} = #{@a+@b}"
 	end
-	def sub
+	def subtraction_op
 		puts "Subtraction"
 		get_input
 		puts "#{@a} - #{@b} = #{@a-@b}"
 	end
-	def mul
+	def multipication_op
 		puts "Multipication"
 		get_input
 		puts "#{@a} x #{@b} = #{@a*@b}"
 	end
-	def div
+	def division_op
 		puts "Division"
 		get_input
 		puts "#{@a} / #{@b} = #{@a.to_f/@b}"
 	end
-	def fac
+	def factorial_op
 		puts "Factorial"
 		print "Enter the value:"
 		n = gets.chomp.to_i
@@ -46,21 +46,21 @@ puts "3.Multipication"
 puts "4.Division"
 puts "5.Factorial"
 puts "6.Exit"
-o = Calculator.new
+cal_obj = Calculator.new
 while true
 	print "Enter your choice:"
-	op = gets.chomp.to_i
-	case op
+	choice = gets.chomp.to_i
+	case choice
 		when 1
-			o.add
+			cal_obj.addition_op
 		when 2
-			o.sub
+			cal_obj.subtraction_op
 		when 3
-			o.mul
+			cal_obj.multipication_op
 		when 4
-			o.div
+			cal_obj.division_op
 		when 5
-			o.fac
+			cal_obj.factorial_op
 		when 6
 			puts "Exit"
 			break
