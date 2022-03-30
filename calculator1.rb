@@ -70,6 +70,7 @@ class Simplification
 	end
 end
 
+
 smp_obj = Simplification.new
 exp = gets.chomp
 smp_obj.simplifier(exp)
